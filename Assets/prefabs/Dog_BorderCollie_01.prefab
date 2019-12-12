@@ -4874,7 +4874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fa8188f06d1e54492c2a10ae8f110c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topBound: 30
+  topBound: 35
   bottomBound: -20
 --- !u!114 &-1371343455802852591
 MonoBehaviour:

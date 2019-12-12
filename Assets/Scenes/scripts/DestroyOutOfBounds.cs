@@ -6,8 +6,8 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
 
     
-    public float topBound = 30;
-    public float bottomBound = -20;
+    public float topBound = 20;
+    public float bottomBound = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +18,20 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.z > topBound) { // Destroy game object after reaching top bound variable
-    
+        if(transform.position.z > topBound) 
+	// Destroy game object after reaching top bound variable
+        {
             Destroy(gameObject);
         }
-        else if (transform.position.z < bottomBound) { Destroy(gameObject);
-        }
+      
+        
+		else if (transform.position.z < bottomBound)
+		{
+			// Destroy gameObject
+			Debug.Log("GAME OVER");
+			//Debug.LogError ("ERROR");
+			//Debug.LogWarning("");
+			Destroy(gameObject);
+		}
     }
 }
