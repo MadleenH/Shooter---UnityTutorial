@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
 
+    private Animator playerAnim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,6 +54,10 @@ public class PlayerController : MonoBehaviour
 
         // Translate position on z-axis
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+
+        // let character walk - set input float of horizontal and vertical input to Speed_f float on animator controller
+        playerAnim.SetFloat("Speed_f", (Mathf.Abs(horizontalInput+verticalInput/2)));
+
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             // Launch Food from player

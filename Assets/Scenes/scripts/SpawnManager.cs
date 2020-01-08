@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     // declares array of game objects for animal hording
     public GameObject [] Prefab; 
     private float spawnPosX = 20.0f;
-    private float spawnPosZ = 29.0f;
+    private float spawnPosZ = 30.0f;
     
 
     // Set variables for InvokeRepeating
@@ -30,12 +30,14 @@ public class SpawnManager : MonoBehaviour
         int animalIndex = Random.Range(0,Prefab.Length);
 
             
-            //random spwanposition:
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnPosX, spawnPosX),0, spawnPosZ);
+        //random spwanposition:
+         Vector3 spawnPosition = new Vector3(Random.Range(-spawnPosX, spawnPosX),0, spawnPosZ);
 
-            // clone animal prefab and spwan
-            Instantiate(Prefab[animalIndex], spawnPosition, Prefab[animalIndex].transform.rotation);
-
+        // clone animal prefab and spwan
+        Instantiate(Prefab[animalIndex], spawnPosition, Prefab[animalIndex].transform.rotation);
+        //Fallback debug logs
+        Debug.Log("AnimalIndex: " + animalIndex); //prints the random generated arry position of the animal
+        Debug.Log("PrefabLength: " + Prefab.Length); //prints the lenght of the arry = total
             
             Debug.Log("Spawned!");
     }

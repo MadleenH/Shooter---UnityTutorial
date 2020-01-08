@@ -671,7 +671,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0facb119bcf5cb4197530097e6d963e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: []
+  Prefab:
+  - {fileID: 7018482768083875108, guid: 79452f711264d06418f04ac6ccf15d38, type: 3}
+  - {fileID: 4852353376276417666, guid: a5c105210a71fd24b9fa5c38ad75fca2, type: 3}
+  - {fileID: 2742729257694475078, guid: edaf9ebec67c1ab40bd12c7e098a86db, type: 3}
   startDelay: 2
   repeatRate: 0.5
 --- !u!4 &1787146605
